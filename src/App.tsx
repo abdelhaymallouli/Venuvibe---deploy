@@ -46,94 +46,17 @@ function AppRoutes() {
       <Route path="/register" element={<Register />} />
       
       {/* Protected routes */}
-      <Route 
-        path="/dashboard" 
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/events" 
-        element={
-          <ProtectedRoute>
-            <EventList />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/events/new" 
-        element={
-          <ProtectedRoute>
-            <EventForm />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/events/:id" 
-        element={
-          <ProtectedRoute>
-            <EventDetails />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/vendors" 
-        element={
-          <ProtectedRoute>
-            <VendorList />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/guests" 
-        element={
-          <ProtectedRoute>
-            <GuestList />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/guests/new" 
-        element={
-          <ProtectedRoute>
-            <GuestForm />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/budget" 
-        element={
-          <ProtectedRoute>
-            <BudgetTracker />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/budget/new" 
-        element={
-          <ProtectedRoute>
-            <BudgetForm />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/tasks" 
-        element={
-          <ProtectedRoute>
-            <TaskList />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/tasks/new" 
-        element={
-          <ProtectedRoute>
-            <TaskForm />
-          </ProtectedRoute>
-        } 
-      />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/events" element={<EventList />} />
+      <Route path="/events/new" element={<EventForm />} />
+      <Route path="/events/:id" element={<EventDetails />} />
+      <Route path="/vendors" element={<VendorList />} />
+      <Route path="/guests" element={<GuestList />} />
+      <Route path="/guests/new" element={<GuestForm />} />
+      <Route path="/budget" element={<BudgetTracker />} />
+      <Route path="/budget/new" element={<BudgetForm />} />
+      <Route path="/tasks" element={<TaskList />} />
+      <Route path="/tasks/new" element={<TaskForm />} />
       
       {/* Fallback route */}
       <Route path="*" element={<Navigate to="/" replace />} />
